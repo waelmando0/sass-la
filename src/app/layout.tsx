@@ -1,6 +1,7 @@
 import './globals.css';
 import { cn } from '../lib/utils';
 import { fontSans } from '../lib/fonts';
+import Header from '../components/Header';
 
 export default function RootLayout({
 	children,
@@ -9,7 +10,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={cn('antialiased', fontSans.variable)}>{children}</body>
+			<body className={cn('antialiased font-sans', fontSans.variable)}>
+				<Header />
+				<main className='flex-1'>{children}</main>
+			</body>
 		</html>
 	);
 }
