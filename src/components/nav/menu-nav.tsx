@@ -1,6 +1,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { cn } from '@/src/lib/utils';
+import { Button } from '../ui/button';
 
 interface MenuLink {
 	route: string;
@@ -25,7 +26,7 @@ const MenuNav = () => {
 
 	return (
 		<nav className='hidden sm:flex items-center'>
-			<ul className='flex gap-6'>
+			<ul className='flex items-center gap-6'>
 				{links.map((item) => (
 					<li key={item.route}>
 						<Link
@@ -39,6 +40,9 @@ const MenuNav = () => {
 						</Link>
 					</li>
 				))}
+				<Button variant='secondary' size='sm' className='font-semibold'>
+					Free Trial
+				</Button>
 			</ul>
 		</nav>
 	);

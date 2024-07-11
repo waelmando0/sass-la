@@ -7,7 +7,7 @@ import MobileMenu from './nav/mobile.menu';
 
 const Header = () => {
 	return (
-		<header className='sticky top-0 z-40 w-full '>
+		<header className='relative z-40 w-full '>
 			<Banner />
 			<div className='bg-black '>
 				<div className='max-w-7xl mx-auto px-4 py-4'>
