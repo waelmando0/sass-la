@@ -3,7 +3,7 @@ const nextConfig = {
 	experimental: {
 		reactCompiler: true,
 		after: true,
-		ppr: 'incremental',
+		ppr: false,
 	},
 };
 
