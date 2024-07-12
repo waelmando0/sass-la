@@ -12,7 +12,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={cn('antialiased font-sans', fontSans.variable)}>
 				<Header />
-				<main className='flex-1'>{children}</main>
+				<main className='relative  flex-1'>{children}</main>
 			</body>
 		</html>
 	);
