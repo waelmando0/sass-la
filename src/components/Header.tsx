@@ -10,7 +10,7 @@ const Header = () => {
 		<header className='relative z-40 w-full '>
 			<Banner />
 			<div className='bg-black '>
-				<div className='max-w-7xl mx-auto px-4 py-4'>
+				<div className='max-w-7xl mx-auto px-6 py-4'>
 					<div className='flex items-center justify-between'>
 						{/* Logo */}
 						<LogoImage />

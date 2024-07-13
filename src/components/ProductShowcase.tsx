@@ -5,7 +5,7 @@ import AppScreen from '../assets/images/app-screen.png';
 const ProductShowcase = () => {
 	return (
 		<section className='bg-black text-white bg-gradient-to-b from-black to-[#502CA8] sm:py-[72px]'>
-			<div className='max-w-7xl mx-auto px-4 pt-[72px] text-center'>
+			<div className='max-w-7xl mx-auto px-6 pt-[72px] text-center'>
 				<div className='flex flex-col items-center justify-center'>
 					<div className='max-w-xl mx-auto'>
 						<h2 className='font-bold text-5xl sm:text-6xl tracking-tighter'>

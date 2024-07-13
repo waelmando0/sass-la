@@ -1,3 +1,4 @@
+import FAQs from '../components/FAQs';
 import Features from '../components/Features';
 import Hero from '../components/Hero';
 import LogoTigger from '../components/LogoTigger';
@@ -10,6 +11,7 @@ const page = () => {
 			<LogoTigger />
 			<Features />
 			<ProductShowcase />
+			<FAQs />
 		</>
 	);
 };

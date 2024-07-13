@@ -25,7 +25,7 @@ const features = [
 const Features = () => {
 	return (
 		<section className='bg-black text-white'>
-			<div className='max-w-7xl mx-auto px-4 pt-[72px] text-center'>
+			<div className='max-w-7xl mx-auto px-6 pt-[72px] text-center'>
 				<div className='max-w-xl mx-auto'>
 					<h2 className='font-bold text-5xl sm:text-6xl tracking-tighter'>
 						Everything you need
@@ -40,7 +40,7 @@ const Features = () => {
 					{features.map((feature) => (
 						<div
 							key={feature.title}
-							className='border border-white/30 px-5 py-10 rounded-xl sm:flex-1'
+							className='border border-white/30 px-6 py-10 rounded-xl'
 						>
 							<div className='inline-flex h-14 w-14 bg-white text-black items-center justify-center rounded-lg'>
 								{feature.icon}

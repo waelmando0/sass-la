@@ -10,7 +10,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={cn('antialiased font-sans', fontSans.variable)}>
+			<body
+				className={cn('antialiased font-sans', fontSans.variable)}
+				suppressHydrationWarning={true}
+			>
 				<Header />
 				<main className='flex-1'>{children}</main>
 			</body>
