@@ -25,7 +25,7 @@ const features = [
 const Features = () => {
 	return (
 		<section className='bg-black text-white'>
-			<div className='max-w-7xl mx-auto px-6 pt-[72px] text-center'>
+			<div className='max-w-7xl mx-auto px-6 py-8 sm:py-[72px] text-center'>
 				<div className='max-w-xl mx-auto'>
 					<h2 className='font-bold text-5xl sm:text-6xl tracking-tighter'>
 						Everything you need

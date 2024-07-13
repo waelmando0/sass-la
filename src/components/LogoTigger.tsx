@@ -19,7 +19,7 @@ const images = [
 const LogoTigger = () => {
 	return (
 		<section className='bg-black text-white'>
-			<div className='max-w-sm md:max-w-7xl mx-auto px-6 sm:py-16'>
+			<div className='max-w-sm md:max-w-7xl mx-auto px-6 py-8 sm:py-16'>
 				<h2 className='text-center text-xl sm:text-2xl text-white/70'>
 					{`Trusted by the world's most innovative teams `}
 				</h2>

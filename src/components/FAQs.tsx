@@ -43,7 +43,7 @@ const AccordionItem = ({
 				onClick={() => setIsOpen(!isOpen)}
 				aria-expanded={isOpen}
 			>
-				<span className='text-lg font-bold'>{question}</span>
+				<span className='text-lg font-bold text-left'>{question}</span>
 				{isOpen ? <Minus /> : <Plus />}
 			</div>
 			<div
@@ -65,12 +65,12 @@ const AccordionItem = ({
 const FAQs = () => {
 	return (
 		<section className='bg-black text-white bg-gradient-to-b from-[#502CA8] to-black'>
-			<div className='max-w-7xl mx-auto px-6 pt-[72px] text-center'>
+			<div className='max-w-7xl mx-auto px-6 py-8 sm:py-[72px] text-center'>
 				<div className='max-w-3xl mx-auto'>
 					<h2 className='font-bold text-5xl sm:text-6xl tracking-tighter'>
 						Frequently asked questions
 					</h2>
-					<div className='mt-12'>
+					<div className='mt-8 sm:mt-12'>
 						{items.map((item) => (
 							<AccordionItem
 								question={item.question}

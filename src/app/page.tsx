@@ -1,3 +1,4 @@
+import CallToAction from '../components/CallToAction';
 import FAQs from '../components/FAQs';
 import Features from '../components/Features';
 import Hero from '../components/Hero';
@@ -12,6 +13,7 @@ const page = () => {
 			<Features />
 			<ProductShowcase />
 			<FAQs />
+			<CallToAction />
 		</>
 	);
 };
