@@ -1,6 +1,7 @@
 import Features from '../components/Features';
 import Hero from '../components/Hero';
 import LogoTigger from '../components/LogoTigger';
+import ProductShowcase from '../components/ProductShowcase';
 
 const page = () => {
 	return (
@@ -8,6 +9,7 @@ const page = () => {
 			<Hero />
 			<LogoTigger />
 			<Features />
+			<ProductShowcase />
 		</>
 	);
 };

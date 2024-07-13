@@ -10,7 +10,6 @@ const Hero = () => {
 	return (
 		<section className='bg-black text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#A46EDB_82%)] py-[72px] sm:py-8 relative overflow-clip'>
 			<div className='absolute h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] md:w-[1200px] md:h-[350px] lg:w-[2400px] lg:h-[500px] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_80%,#9560EB)] top-[calc(100%-103px)]'></div>
-
 			<div className='container sm:max-w-2xl text-center z-20 relative'>
 				<div className='flex items-center justify-center'>
 					<Link
