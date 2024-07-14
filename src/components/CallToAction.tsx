@@ -17,7 +17,7 @@ const CallToAction = () => {
 	const translateY = useTransform(scrollYProgress, [0, 1], [40, -40]);
 
 	return (
-		<section className='bg-black text-white' ref={containerRef}>
+		<section className='bg-black text-white relative' ref={containerRef}>
 			<div className='max-w-7xl mx-auto px-6 py-12 sm:py-[72px] text-center'>
 				<div className='max-w-xl mx-auto relative'>
 					<motion.div
@@ -28,7 +28,7 @@ const CallToAction = () => {
 						<Image
 							src={helixImage}
 							alt='icon'
-							className=' absolute top-24 left-[calc(100%+36px)]'
+							className='hidden lg:block absolute top-24 left-[calc(100%+26px)]'
 							height='200'
 							width='200'
 						/>
@@ -41,7 +41,7 @@ const CallToAction = () => {
 						<Image
 							src={emojiStar}
 							alt='icon'
-							className='absolute -top-[50px] right-[calc(100%+24px)]'
+							className='hidden lg:block absolute -top-[50px] right-[calc(100%+24px)]'
 							height='200'
 							width='200'
 						/>
@@ -52,8 +52,8 @@ const CallToAction = () => {
 						Get instant access
 					</h2>
 					<p className='mt-4 sm:text-xl text-white/70'>
-						Celebrate the joy accomplishment with an app designed to track your
-						progress and motivate your efforts.
+						Celebrate the joy of accomplishment with an app designed to track
+						your progress and motivate your efforts.
 					</p>
 				</div>
 				<form className='mt-10 flex items-center justify-center gap-2.5 flex-col sm:flex-row max-w-md mx-auto'>

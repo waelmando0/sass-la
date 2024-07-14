@@ -22,7 +22,6 @@ export const metadata: Metadata = {
 	creator: 'waelmando',
 	icons: {
 		icon: '/favicon.ico',
-		shortcut: '/favicon-16x16.png',
 		apple: '/apple-touch-icon.png',
 	},
 };
@@ -34,7 +33,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<body className={cn('antialiased font-sans', fontSans.variable)}>
+			<body
+				className={cn('antialiased font-sans', fontSans.variable)}
+				suppressHydrationWarning={true}
+			>
 				<Header />
 				<main className='flex-1'>{children}</main>
 				<Footer />
