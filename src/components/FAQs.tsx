@@ -65,7 +65,7 @@ const AccordionItem = ({
 const FAQs = () => {
 	return (
 		<section className='bg-black text-white bg-gradient-to-b from-[#502CA8] to-black'>
-			<div className='max-w-7xl mx-auto px-6 py-8 sm:py-[72px] text-center'>
+			<div className='max-w-7xl mx-auto px-6 py-12 sm:py-[72px] text-center'>
 				<div className='max-w-3xl mx-auto'>
 					<h2 className='font-bold text-5xl sm:text-6xl tracking-tighter'>
 						Frequently asked questions

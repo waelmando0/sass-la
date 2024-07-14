@@ -7,7 +7,7 @@ import Image from 'next/image';
 const CallToAction = () => {
 	return (
 		<section className='bg-black text-white'>
-			<div className='max-w-7xl mx-auto px-6 py-8 sm:py-[72px] text-center'>
+			<div className='max-w-7xl mx-auto px-6 py-12 sm:py-[72px] text-center'>
 				<div className='relative'>
 					<Image
 						src={helixImage}
@@ -33,13 +33,17 @@ const CallToAction = () => {
 						progress and motivate your efforts.
 					</p>
 				</div>
-				<form className='mt-10 flex items-center justify-center gap-2.5'>
+				<form className='mt-10 flex items-center justify-center gap-2.5 flex-col sm:flex-row max-w-md mx-auto'>
 					<input
 						type='email'
 						placeholder='your@email.com'
-						className='h-12 bg-white/20 rounded-lg px-5 placeholder:text-[#9CA3AF]'
+						className='h-12 bg-white/20 rounded-lg px-5 placeholder:text-[#9CA3AF] sm:flex-1 w-full sm:w-auto'
 					/>
-					<Button variant='secondary' size='lg' className=''>
+					<Button
+						variant='secondary'
+						size='lg'
+						className='w-full sm:w-auto font-semibold'
+					>
 						Get access
 					</Button>
 				</form>
