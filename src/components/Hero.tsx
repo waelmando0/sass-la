@@ -34,7 +34,7 @@ const Hero = () => {
 						at a time
 					</h1>
 					<motion.div
-						className='absolute left-0 top-[80px] hidden sm:block'
+						className='absolute -left-3 top-[70px] hidden sm:block'
 						drag
 						dragSnapToOrigin
 					>
@@ -47,7 +47,7 @@ const Hero = () => {
 						/>
 					</motion.div>
 					<motion.div
-						className='absolute left-[476px] bottom-[160] hidden sm:block'
+						className='absolute left-[480px] bottom-[180] hidden sm:block'
 						drag
 						dragSnapToOrigin
 					>

@@ -1,28 +1,51 @@
-import React from 'react';
+'use client';
+import { useRef } from 'react';
 import { Button } from './ui/button';
 import helixImage from '../assets/images/helix2.png';
 import emojiStar from '../assets/images/emojistar.png';
 import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const CallToAction = () => {
+	const containerRef = useRef<HTMLDivElement>(null);
+
+	const { scrollYProgress } = useScroll({
+		target: containerRef,
+		offset: ['start end', 'end end'],
+	});
+
+	const translateY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+
 	return (
-		<section className='bg-black text-white'>
+		<section className='bg-black text-white' ref={containerRef}>
 			<div className='max-w-7xl mx-auto px-6 py-12 sm:py-[72px] text-center'>
-				<div className='relative'>
-					<Image
-						src={helixImage}
-						alt=''
-						className='hidden lg:block absolute lg:top-6 lg:left-[calc(100%-300px)]'
-						height='200'
-						width='200'
-					/>
-					<Image
-						src={emojiStar}
-						alt=''
-						className='hidden lg:block absolute lg:-top-[90px] lg:right-[calc(100%-320px)]'
-						height='200'
-						width='200'
-					/>
+				<div className='max-w-xl mx-auto relative'>
+					<motion.div
+						style={{
+							translateY,
+						}}
+					>
+						<Image
+							src={helixImage}
+							alt='icon'
+							className=' absolute top-24 left-[calc(100%+36px)]'
+							height='200'
+							width='200'
+						/>
+					</motion.div>
+					<motion.div
+						style={{
+							translateY,
+						}}
+					>
+						<Image
+							src={emojiStar}
+							alt='icon'
+							className='absolute -top-[50px] right-[calc(100%+24px)]'
+							height='200'
+							width='200'
+						/>
+					</motion.div>
 				</div>
 				<div className='max-w-xl mx-auto'>
 					<h2 className='font-bold text-5xl sm:text-6xl tracking-tighter'>
