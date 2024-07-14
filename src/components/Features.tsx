@@ -1,5 +1,6 @@
 import React from 'react';
 import { Banana, Goal, GlobeLock } from 'lucide-react';
+import Feature from './Feature';
 
 const features = [
 	{
@@ -37,17 +38,13 @@ const Features = () => {
 					</p>
 				</div>
 				<div className='flex flex-col sm:flex-row gap-4 mt-8 sm:mt-16'>
-					{features.map((feature) => (
-						<div
-							key={feature.title}
-							className='border border-white/30 px-6 py-10 rounded-xl'
-						>
-							<div className='inline-flex h-14 w-14 bg-white text-black items-center justify-center rounded-lg'>
-								{feature.icon}
-							</div>
-							<h3 className='mt-4 font-bold'>{feature.title}</h3>
-							<p className='mt-2 text-white/70'>{feature.description}</p>
-						</div>
+					{features.map(({ title, description, icon }) => (
+						<Feature
+							title={title}
+							description={description}
+							icon={icon}
+							key={title}
+						/>
 					))}
 				</div>
 			</div>
