@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import React from 'react';
 import { Button } from '../components/ui/button';
@@ -5,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import cursorImage from '../assets/images/cursor.png';
 import messageImage from '../assets/images/message.png';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
 	return (
@@ -30,20 +33,32 @@ const Hero = () => {
 						One Task <br />
 						at a time
 					</h1>
-					<Image
-						src={cursorImage}
-						alt='Cursor Icon'
+					<motion.div
 						className='absolute left-0 top-[80px] hidden sm:block'
-						height='150'
-						width='150'
-					/>
-					<Image
-						src={messageImage}
-						alt='message Icon'
+						drag
+						dragSnapToOrigin
+					>
+						<Image
+							src={cursorImage}
+							alt='Cursor Icon'
+							height='150'
+							width='150'
+							draggable='false'
+						/>
+					</motion.div>
+					<motion.div
 						className='absolute left-[476px] bottom-[160] hidden sm:block'
-						height='150'
-						width='150'
-					/>
+						drag
+						dragSnapToOrigin
+					>
+						<Image
+							src={messageImage}
+							alt='message Icon'
+							height='150'
+							width='150'
+							draggable='false'
+						/>
+					</motion.div>
 					<p className='text-base sm:text-xl mt-8 max-w-sm sm:max-w-md mx-auto'>
 						Celebrate the joy of accomplishment with an app designed to track
 						your gress, motivate your efforts, and celebrate your successes.
