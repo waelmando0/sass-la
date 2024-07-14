@@ -33,7 +33,7 @@ const Feature = ({
 		return () => {
 			window.removeEventListener('mousemove', updateMousePosition);
 		};
-	}, []);
+	}, [offsetX, offsetY]);
 
 	return (
 		<div className='border border-white/30 px-6 py-10 rounded-xl relative'>

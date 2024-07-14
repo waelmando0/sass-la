@@ -1,7 +1,9 @@
 'use client';
 
+import { AnimatePresence, motion } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
-import React, { useState, useRef } from 'react';
+import { useState } from 'react';
+import { cn } from '../lib/utils';
 
 const items = [
 	{
@@ -34,7 +36,6 @@ const AccordionItem = ({
 	answer: string;
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const contentRef = useRef<HTMLDivElement>(null);
 
 	return (
 		<div className='py-7 border-b border-white/30'>
@@ -46,18 +47,17 @@ const AccordionItem = ({
 				<span className='text-lg font-bold text-left'>{question}</span>
 				{isOpen ? <Minus /> : <Plus />}
 			</div>
-			<div
-				ref={contentRef}
-				style={{
-					maxHeight:
-						isOpen && contentRef.current
-							? `${contentRef.current.scrollHeight}px`
-							: '0px',
-				}}
-				className='overflow-hidden transition-max-height duration-500 ease-in-out'
-			>
-				<div className='mt-4 text-left'>{answer}</div>
-			</div>
+			<AnimatePresence>
+				{isOpen && (
+					<motion.div
+						initial={{ opacity: 0, height: 0, marginTop: 0 }}
+						animate={{ opacity: 1, height: 'auto', marginTop: '16px' }}
+						exit={{ opacity: 0, height: 0, marginTop: 0 }}
+					>
+						<div className='text-left'>{answer}</div>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</div>
 	);
 };
